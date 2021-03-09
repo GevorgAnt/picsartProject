@@ -1,0 +1,31 @@
+
+const PostController = require('./posts/Postcontroll');
+app.use('/addPost', PostController);
+
+
+
+module.exports = app;
+
+const imageController = require('./image/ImageUpload');
+app.use('/Image', imageController);
+
+
+
+portnumber 3000
+
+/user for user control
+    /-to get all users
+    get/:id to get specific user (give id with req.params.id)
+    delete/:id to delet  specific user(give id with req.params.id)
+    put/:id to update  specific user(give id with req.params.id)
+
+/auth for login end register
+      post /auth /register to register new user(req.body.name,
+                                        req.body.email,
+                                        hashedPassword,)
+       post/auth /login to login with email and password and get jwt
+      get /auth /me to get user with jwt
+
+
+/addPost to add and manage posts
+   post /post to add post with description and text (req.body.text,req.body.description)
