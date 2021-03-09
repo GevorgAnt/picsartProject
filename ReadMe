@@ -1,17 +1,8 @@
-
-const PostController = require('./posts/Postcontroll');
-app.use('/addPost', PostController);
-
-
-
-module.exports = app;
-
-const imageController = require('./image/ImageUpload');
-app.use('/Image', imageController);
-
-
-
 portnumber 3000
+
+
+
+
 
 /user for user control
     /-to get all users
@@ -27,5 +18,23 @@ portnumber 3000
       get /auth /me to get user with jwt
 
 
+
+
+
+
 /addPost to add and manage posts
    post /post to add post with description and text (req.body.text,req.body.description)
+   get/getPosts to get user all posts
+   put/updatePosts to update specific post with id(req.body.postId
+                                                   ,req.body.text,
+                                                   req.body.description,)
+   get/findPost find specific post with id(req.body.postId)
+   get/getAllPosts to get all posts(deosnt matter user or guest)
+   delete/PostDelete to delete specific post with id(req.body.postId)
+
+
+
+
+
+
+/Image for image uploading (it doesnt work for now)
